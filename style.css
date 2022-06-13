@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Start Global Styles */
+:root {
+    --primary-color: #3a6cf4;
+    --secondary-color: #493da1;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Small*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*Medium*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*Large*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Styles */
+
+/*Start Header Styles*/
+header {
+    background-color: #F0F0F0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+}
+
+header .container .logo {
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+    letter-spacing: 1.5px;
+}
+
+header .container nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    header .container .logo {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+    }
+
+    header .container nav a {
+        font-size: 0.8em;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+}
+
+header .container nav a:hover {
+    color: var(--secondary-color);
+}
+/*End Header Styles*/
+
+/* Start Main Section */
+.main {
+    padding-top: 96px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("images/p9mUO.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main h3 {
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.main h1 {
+    color: var(--primary-color);
+    font-size: 3em;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.main h2 {
+    color: #FFF;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.main .main-btn {
+    color: #FFF;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+
+.main .main-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: #FFF;
+    font-size: 1.7em;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: block;
+        min-height: 70vh;
+        padding-top: 20vh;
+    }
+
+    .main h1 {
+        font-size: 1.5em;
+    }
+
+    .main h2 {
+        font-size: 1.2em;
+    }
+}
+/* End Main Section */
+
+/* Start Skills Section */
+.skills-section {
+    padding: 50px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cards .card {
+    padding: 25px;
+    text-align: center;
+    background-color: #FFF;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+}
+
+.cards .card:hover .info h3 {
+    color: var(--secondary-color);
+}
+
+.cards .card:hover .icon{
+    color: var(--secondary-color);
+}
+
+.cards .card .icon {
+    color: var(--primary-color);
+    font-size: 8em;
+    transition: 0.3s;
+}
+
+.cards .card .info h3 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.cards .card .info p {
+    line-height: 1.2;
+}
+/* End Skills Section */
+
+/* Start Assignments Section */
+.assignments-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    flex-wrap: wrap;
+}
+
+.assignments-content .assigns-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    align-items: flex-start;
+}
+
+.assignments-content .srv .assignment-link a {
+    text-decoration: none;
+    color: #000;
+}
+
+.assignments-content .srv .assignment-link a div {
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+.assignments-content .srv .assignment-link a div i {
+    font-size: 48px;
+}
+
+.assignments-content .srv .assignment-link a div i img {
+    width: 48px;
+    height: 48px;
+}
+
+.assignments-content .srv .assignment-link a div h3 {
+    margin-left: 20px;
+    font-size: 1.3em;
+}
+
+.assignments-content .srv .assignment-link a div h3.freecodecamp {
+    margin-left: 15px;
+}
+
+.assignments-content .srv p {
+    font-size: 18px;
+    padding-left: 70px;
+}
+
+.assignments-content .srv p.codewars {
+    margin-top: -15px;
+}
+
+.assignments-content .col .image {
+    width: 300px;
+    height: 200px;
+    background-image: url("images/c6586210-720d-11ec-b9cc-99262c41d8f4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .assignments-content {
+        justify-content: start;
+    }
+
+    .assignments-content .col {
+        margin: 0 auto;
+    }
+
+    .assignments-content .col .image {
+        background-size: cover;
+    }
+
+}
+/* End Assignments Section */
+
+/* Start Contact Section */
+.contact {
+    margin: 50px 0;
+}
+
+.contact h2 {
+    margin-bottom: 50px;
+}
+
+.contact .info .phone-number {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin: 200px 0 40px;
+    }
+}
+/* End Contact Section */
+
+/* Start Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 500;
+}
+
+footer span {
+    color: var(--primary-color);
+}
+/* End Footer */
